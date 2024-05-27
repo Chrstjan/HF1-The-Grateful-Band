@@ -1,6 +1,7 @@
 $header-background-color: #1c1c1c;
 
 .main-container {
+    background: #2c2c2c;
     .main-header {
         padding: 0rem 0.6rem;
         display: flex;
@@ -38,6 +39,14 @@ $header-background-color: #1c1c1c;
                 height: 8px;
                 background: #fff;
                 border-radius: 6px;
+            }
+        }
+    }
+
+    #app {
+        .landing-hero-figure {
+            img {
+                width: 80vw;
             }
         }
     }

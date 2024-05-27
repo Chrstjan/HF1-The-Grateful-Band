@@ -1,3 +1,6 @@
+.main-container {
+  background: #2c2c2c;
+}
 .main-container .main-header {
   padding: 0rem 0.6rem;
   display: flex;
@@ -32,4 +35,7 @@
   height: 8px;
   background: #fff;
   border-radius: 6px;
+}
+.main-container #app .landing-hero-figure img {
+  width: 80vw;
 }/*# sourceMappingURL=main.css.map */
