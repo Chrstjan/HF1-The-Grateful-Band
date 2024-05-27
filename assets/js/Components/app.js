@@ -1,4 +1,4 @@
-import { buildHero } from "./landing.js"
+import { buildHero } from "./heroGallery.js";
 
 export const initPage = () => {
   buildHero();

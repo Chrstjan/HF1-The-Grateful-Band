@@ -19,10 +19,18 @@ export const buildHero = () => {
 
     app.innerHTML += herolanding;
 
-    galleryArray.map((index) => {
-        let heroBullets = `<button class="figure-bullets" bullet-index="${index}">Bullet</button>`;
+    const bulletContainer = document.createElement("div");
+    bulletContainer.classList.add("bullets-container");
 
-        app.innerHTML += heroBullets;
+    galleryArray.map((index) => {
+        let heroBullets = `
+            <button
+             class="figure-bullets"
+             bullet-index="${index}">.
+            </button>`;
+
+        bulletContainer.innerHTML += heroBullets;
+        app.appendChild(bulletContainer);
     });
 
     const heroBullets = document.querySelectorAll(".figure-bullets");

@@ -38,4 +38,30 @@
 }
 .main-container #app .landing-hero-figure img {
   width: 80vw;
-}/*# sourceMappingURL=main.css.map */
+}
+.main-container #app .bullets-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+.main-container #app .bullets-container .figure-bullets {
+  padding: 0.1rem 0.4rem;
+  color: transparent;
+  border-radius: 100%;
+  border: 0;
+  background: #fff;
+}
+.main-container .main-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1c1c1c;
+  color: #fff;
+}
+.main-container .main-footer figure figcaption header h2 {
+  text-align: center;
+}
