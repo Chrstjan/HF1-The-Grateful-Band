@@ -1,5 +1,6 @@
 @import url(animations.css);
 @import url(main.css);
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 
 body {
   margin: 0;
@@ -9,5 +10,5 @@ body {
 .main-container {
   margin: 0 auto;
   padding: 0;
-  font-family: sans-serif;
+  font-family: sans-serif, "Rock Salt", Arial, Helvetica;
 }

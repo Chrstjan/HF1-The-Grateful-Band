@@ -40,6 +40,11 @@
   align-items: center;
   gap: 0.5rem;
 }
+.main-container .main-header .header-container h1 {
+  font-family: "Rock Salt";
+  font-weight: 400;
+  font-size: x-large;
+}
 .main-container .main-header .header-container img {
   width: 15vw;
   padding-bottom: 0.5rem;
@@ -87,6 +92,12 @@
   background: #fff;
   border-radius: 6px;
 }
+.main-container #app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .main-container #app .landing-hero-figure img {
   width: 80vw;
 }
@@ -105,6 +116,22 @@
   border: 0;
   background: rgba(255, 255, 255, 0.6);
 }
+.main-container #app .band-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 0rem 0.6rem;
+  background-image: url(../img/Video.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-container #app .band-container header h2 {
+  font-family: "Rock Salt";
+  font-weight: 400;
+  font-size: x-large;
+}
 .main-container .main-footer {
   display: flex;
   flex-direction: column;
@@ -115,4 +142,7 @@
 }
 .main-container .main-footer figure figcaption header h2 {
   text-align: center;
+  font-family: "Rock Salt";
+  font-weight: 400;
+  font-size: x-large;
 }/*# sourceMappingURL=main.css.map */

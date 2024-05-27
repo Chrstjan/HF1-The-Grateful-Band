@@ -31,6 +31,12 @@ $header-background-color: #1c1c1c;
       align-items: center;
       gap: 0.5rem;
 
+      h1 {
+        font-family: "Rock Salt";
+        font-weight: 400;
+        font-size: x-large;
+      }
+
       img {
         width: 15vw;
         padding-bottom: 0.5rem;
@@ -88,6 +94,11 @@ $header-background-color: #1c1c1c;
   }
 
   #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     .landing-hero-figure {
       img {
         width: 80vw;
@@ -110,6 +121,26 @@ $header-background-color: #1c1c1c;
         background: #ffffff99;
       }
     }
+
+    .band-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      padding: 0rem 0.6rem;
+      background-image: url(../img/Video.gif);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      header {
+        h2 {
+          font-family: "Rock Salt";
+          font-weight: 400;
+          font-size: x-large;
+        }
+      }
+    }
   }
 
   .main-footer {
@@ -125,6 +156,9 @@ $header-background-color: #1c1c1c;
         header {
           h2 {
             text-align: center;
+            font-family: "Rock Salt";
+            font-weight: 400;
+            font-size: x-large;
           }
         }
       }
