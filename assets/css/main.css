@@ -76,6 +76,7 @@
   list-style-type: none;
 }
 .main-container .main-header .main-nav.show-nav ul li a {
+  font-family: "Roboto Mono";
   text-decoration: none;
   color: #fff;
   font-size: 18px;
@@ -131,6 +132,12 @@
   font-family: "Rock Salt";
   font-weight: 400;
   font-size: x-large;
+}
+.main-container #app .band-container .about-The-Grateful p:first-of-type {
+  margin-top: 0;
+}
+.main-container #app .band-container .about-The-Grateful p {
+  font-family: "Roboto Mono";
 }
 .main-container .main-footer {
   display: flex;

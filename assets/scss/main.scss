@@ -70,6 +70,7 @@ $header-background-color: #1c1c1c;
           list-style-type: none;
 
           a {
+            font-family: "Roboto Mono";
             text-decoration: none;
             color: #fff;
             font-size: 18px;
@@ -138,6 +139,15 @@ $header-background-color: #1c1c1c;
           font-family: "Rock Salt";
           font-weight: 400;
           font-size: x-large;
+        }
+      }
+
+      .about-The-Grateful {
+        p:first-of-type {
+          margin-top: 0;
+        }
+        p {
+          font-family: "Roboto Mono";
         }
       }
     }
