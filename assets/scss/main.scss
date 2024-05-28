@@ -25,6 +25,7 @@ $white-text-color: #ffffff;
 }
 //#endregion mixins
 
+//#region animations
 @keyframes navbarSlidedown {
   0% {
     top: 9%;
@@ -43,6 +44,22 @@ $white-text-color: #ffffff;
   80% {transform: rotate(-60deg);}
   100% {transform: rotate(5deg);}
 }
+
+ @keyframes burgerTop {
+    0% {transform: translateY(0) rotate(0deg);}
+    100% {transform: translateY(13px) rotate(45deg);}
+ }
+
+ @keyframes burgerMiddle {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+ }
+
+ @keyframes burgerBottom {
+  0% {transform: translateY(0) rotate(0deg);}
+  100% {transform: translateY(-13px) rotate(-45deg);}
+ }
+ //#endregion animations
 
 .main-container {
   background: #2c2c2c;
@@ -118,6 +135,16 @@ $white-text-color: #ffffff;
         height: 8px;
         background: $white-text-color;
         border-radius: 6px;
+      }
+
+      .bar.burger-top {
+        animation: burgerTop 0.5s 1 forwards ease-in-out;
+      }
+      .bar.burger-middle {
+        animation: burgerMiddle 0.5s 1 forwards ease-in-out;
+      }
+      .bar.burger-bottom {
+        animation: burgerBottom 0.5s 1 forwards ease-in-out;
       }
     }
   }

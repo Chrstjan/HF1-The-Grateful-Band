@@ -1,7 +1,6 @@
 import { buildAboutBandView, buildBandMembers } from "./band.js";
 import { buildHero } from "./heroGallery.js";
-import { showNewsletter, shownav } from "./other.js";
-import { newsletter } from "../newsletter.js";
+import { showNewsletter, shownav, scrollChecker } from "./other.js";
 
 export const initPage = () => {
   buildHero();
@@ -9,4 +8,5 @@ export const initPage = () => {
   buildAboutBandView();
   buildBandMembers();
   showNewsletter();
+  scrollChecker();
 };

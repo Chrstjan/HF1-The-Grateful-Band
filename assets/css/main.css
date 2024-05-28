@@ -23,6 +23,30 @@
     transform: rotate(5deg);
   }
 }
+@keyframes burgerTop {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(13px) rotate(45deg);
+  }
+}
+@keyframes burgerMiddle {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes burgerBottom {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-13px) rotate(-45deg);
+  }
+}
 .main-container {
   background: #2c2c2c;
 }
@@ -103,6 +127,15 @@
   height: 8px;
   background: #ffffff;
   border-radius: 6px;
+}
+.main-container .main-header #hamburger .bar.burger-top {
+  animation: burgerTop 0.5s 1 forwards ease-in-out;
+}
+.main-container .main-header #hamburger .bar.burger-middle {
+  animation: burgerMiddle 0.5s 1 forwards ease-in-out;
+}
+.main-container .main-header #hamburger .bar.burger-bottom {
+  animation: burgerBottom 0.5s 1 forwards ease-in-out;
 }
 .main-container #app {
   display: flex;
