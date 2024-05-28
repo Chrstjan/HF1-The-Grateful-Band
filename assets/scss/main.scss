@@ -1,6 +1,9 @@
+//#region variables
 $header-background-color: #1c1c1c;
 $white-text-color: #ffffff;
+//#endregion variables
 
+//#region mixins
 @mixin flexBox($direction: row, $justify: center) {
   display: flex;
   flex-direction: $direction;
@@ -20,6 +23,7 @@ $white-text-color: #ffffff;
   font-weight: $fontweight;
   font-size: $fontsize;
 }
+//#endregion mixins
 
 @keyframes navbarSlidedown {
   0% {
@@ -33,8 +37,16 @@ $white-text-color: #ffffff;
   }
 }
 
+@keyframes logoRotate {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(60deg);}
+  80% {transform: rotate(-60deg);}
+  100% {transform: rotate(5deg);}
+}
+
 .main-container {
   background: #2c2c2c;
+  //#region main header
   .main-header {
     padding: 0rem 0.6rem;
     @include flexBox(row, space-between);
@@ -50,9 +62,10 @@ $white-text-color: #ffffff;
         @include fontFamily("Rock Salt", 400, x-large);
       }
 
-      img {
+      .header-logo {
         width: 15vw;
         padding-bottom: 0.5rem;
+        animation: logoRotate 5s forwards infinite ease-in-out;
       }
     }
 
@@ -84,6 +97,13 @@ $white-text-color: #ffffff;
             text-decoration: none;
             color: $white-text-color;
           }
+
+          button {
+            background: 0;
+            border: 0;
+            @include fontFamily("Roboto Mono", 800, 18px);
+            color: $white-text-color;
+          }
         }
       }
     }
@@ -101,9 +121,12 @@ $white-text-color: #ffffff;
       }
     }
   }
+  //#endregion main header
 
+  //#region app container
   #app {
     @include flexBox(column, center);
+    //#region landing hero
     .landing-hero-figure {
       img {
         width: 80vw;
@@ -123,7 +146,9 @@ $white-text-color: #ffffff;
         background: #ffffff99;
       }
     }
+    //#endregion landing hero
 
+    //#region about band
     .band-container {
       @include flexBox(column, center);
       display: flex;
@@ -149,7 +174,9 @@ $white-text-color: #ffffff;
       }
 
     }
+    //#endregion about band
 
+    //#region band members
     .band-article {
       @include gridTemplate(1, 1fr, center, center);
       gap: 0.5rem;
@@ -174,8 +201,73 @@ $white-text-color: #ffffff;
         }
       }
     }
-  }
+    //#endregion band members
 
+    //#region newsletter
+    .newsletter-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      form {
+        fieldset {
+          position: relative;
+          @include flexBox(column, center);
+          gap: 0.5rem;
+          background: #2c2c2c;
+          border: 0;
+          border: 4px solid $header-background-color;
+          border-radius: 10px;
+          width: 70vw;
+          @include fontFamily("Roboto Neue", 400, medium);
+          color: $white-text-color;
+          text-align: center;
+    
+          button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: transparent;
+            border: 0;
+            color: $white-text-color;
+            font-size: 20px;
+          }
+
+          input {
+            border-radius: 6px;
+            border: 0;
+            padding: 0.2rem 0.4rem;
+          }
+
+          .form-btn-container {
+            @include flexBox(row, center);
+            gap: 0.6rem;
+
+            input {
+              border-radius: 6px;
+              padding: 0.4rem 0.6rem;
+              border: 0;
+              color: $white-text-color;
+              @include fontFamily("Robot Neue", 600, medium);
+
+              &:first-of-type {
+                background: green;
+              }
+
+              &:last-of-type {
+                background: red;
+              }
+            }
+          }
+        }
+      }
+    }
+    //#endregion newsletter
+  }
+  //#endregion app container
+
+  //#region main footer
   .main-footer {
     @include flexBox(column, center);
     background: $header-background-color;
@@ -201,4 +293,5 @@ $white-text-color: #ffffff;
       }
     }
   }
+    //#endregion main footer
 }

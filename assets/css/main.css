@@ -9,6 +9,20 @@
     top: 10%;
   }
 }
+@keyframes logoRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+  80% {
+    transform: rotate(-60deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
 .main-container {
   background: #2c2c2c;
 }
@@ -34,9 +48,10 @@
   font-weight: 400;
   font-size: x-large;
 }
-.main-container .main-header .header-container img {
+.main-container .main-header .header-container .header-logo {
   width: 15vw;
   padding-bottom: 0.5rem;
+  animation: logoRotate 5s forwards infinite ease-in-out;
 }
 .main-container .main-header .main-nav {
   display: none;
@@ -68,6 +83,14 @@
   font-weight: 800;
   font-size: 18px;
   text-decoration: none;
+  color: #ffffff;
+}
+.main-container .main-header .main-nav.show-nav ul li button {
+  background: 0;
+  border: 0;
+  font-family: "Roboto Mono";
+  font-weight: 800;
+  font-size: 18px;
   color: #ffffff;
 }
 .main-container .main-header #hamburger {
@@ -149,6 +172,66 @@
 }
 .main-container #app .band-article figure h3 {
   font-family: "Roboto Mono";
+}
+.main-container #app .newsletter-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-container #app .newsletter-container form fieldset {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: #2c2c2c;
+  border: 0;
+  border: 4px solid #1c1c1c;
+  border-radius: 10px;
+  width: 70vw;
+  font-family: "Roboto Neue";
+  font-weight: 400;
+  font-size: medium;
+  color: #ffffff;
+  text-align: center;
+}
+.main-container #app .newsletter-container form fieldset button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 20px;
+}
+.main-container #app .newsletter-container form fieldset input {
+  border-radius: 6px;
+  border: 0;
+  padding: 0.2rem 0.4rem;
+}
+.main-container #app .newsletter-container form fieldset .form-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+.main-container #app .newsletter-container form fieldset .form-btn-container input {
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  border: 0;
+  color: #ffffff;
+  font-family: "Robot Neue";
+  font-weight: 600;
+  font-size: medium;
+}
+.main-container #app .newsletter-container form fieldset .form-btn-container input:first-of-type {
+  background: green;
+}
+.main-container #app .newsletter-container form fieldset .form-btn-container input:last-of-type {
+  background: red;
 }
 .main-container .main-footer {
   display: flex;
