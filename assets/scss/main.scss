@@ -182,11 +182,20 @@ $white-text-color: #ffffff;
     color: $white-text-color;
 
     figure {
+
       figcaption {
         header {
           h2 {
             text-align: center;
             @include fontFamily("Rock Salt", 400, x-large);
+          }
+        }
+
+        #so-me {
+          @include gridTemplate(4, 1fr, center, center);
+
+          img {
+            width: 15vw;
           }
         }
       }

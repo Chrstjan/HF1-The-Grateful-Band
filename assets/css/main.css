@@ -164,3 +164,12 @@
   font-weight: 400;
   font-size: x-large;
 }
+.main-container .main-footer figure figcaption #so-me {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.main-container .main-footer figure figcaption #so-me img {
+  width: 15vw;
+}
