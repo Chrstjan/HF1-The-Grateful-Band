@@ -36,23 +36,27 @@ let bandMembersArray =
 [
     {
         name: "Wendy Wei",
-        description: "Lead singer",
-        img: "assets/img/pexels-wendy-wei-1699161.jpg"
+        role: "Lead singer",
+        img: "assets/img/pexels-wendy-wei-1699161.jpg",
+        description: "Wendy Wei, The co-creater and captivating lead vocalist of The Grateful, is the heart and soul of the band. Her dynamic range and emotional depth have become defining elements of the band's sound. Wendy's voice can seamlessly transition from hauntingly soft melodies to powerful, anthemic choruses, captivating audiences with every note."
     },
     {
         name: "Brett Sayles",
-        description: "Guitarist",
-        img: "assets/img/pexels-brett-sayles-1309240.jpg"
+        role: "Guitarist",
+        img: "assets/img/pexels-brett-sayles-1309240.jpg",
+        description: "Brett Sayles, The co-creater and guitarist for The Restful, is the architect of the band's rich, intricate soundscapes. Known for his exceptional skill and creativity, Brett's guitar work ranges from delicate acoustic strumming to explosive electric solos,"
     },
     {
         name: "Jc Siller",
-        description: "Drummer",
-        img: "assets/img/pexels-jc-siller-8634867.jpg"
+        role: "Drummer",
+        img: "assets/img/pexels-jc-siller-8634867.jpg",
+        description: "JC Siller, the powerhouse drummer of The Restful, provides the rhythmic backbone that drives the band's energetic performances. Known for his impeccable timing and dynamic drumming style, JC brings a powerful, infectious energy to every song."
     },
     {
         name: "Oleg Magni",
-        description: "Bassist",
-        img: "assets/img/pexels-oleg-magni-1813124.jpg"
+        role: "Bassist",
+        img: "assets/img/pexels-oleg-magni-1813124.jpg",
+        description: "Oleg Magni, the bassist for The Restful, is the groove master who anchors the band's sound with his smooth, rhythmic bass lines. Oleg's playing is characterized by its precision and fluidity, providing a solid foundation that supports the melodies and harmonies of the band's songs. His ability to create catchy, driving bass lines that complement both the guitar and drums adds depth and richness to The Restful's music."
     }
 ];
 
@@ -68,7 +72,13 @@ export const buildBandMembers = () => {
         let bandMembers = `
             <figure>
                 <img src="${member.img}"
-                <h4>${member.name}</h4>
+                <h3>${member.name}</h3>
+                <figcaption>
+                    <header>
+                        <h4>${member.role}</h4>
+                    </header>
+                    <p>${member.description}</p>
+                </figcaption>
             </figure>`;
 
             bandArticle.innerHTML += bandMembers;

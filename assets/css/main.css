@@ -19,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  color: #fff;
+  color: #ffffff;
   background: #1c1c1c;
 }
 .main-container .main-header .header-container {
@@ -65,10 +65,10 @@
 }
 .main-container .main-header .main-nav.show-nav ul li a {
   font-family: "Roboto Mono";
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
   font-weight: 800;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
 }
 .main-container .main-header #hamburger {
   display: block;
@@ -78,7 +78,7 @@
   margin: 5px 8px;
   width: 20px;
   height: 8px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 6px;
 }
 .main-container #app {
@@ -110,7 +110,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  display: flex;
+  color: #ffffff;
   padding: 0rem 0.6rem;
   background-image: url(../img/Video.gif);
   background-repeat: no-repeat;
@@ -127,8 +128,27 @@
 .main-container #app .band-container .about-The-Grateful p {
   font-family: "Roboto Mono";
 }
+.main-container #app .band-article {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+}
+.main-container #app .band-article header {
+  padding-top: 0.8rem;
+  text-align: center;
+}
+.main-container #app .band-article header h2 {
+  margin: 0;
+  font-family: "Rock Salt";
+}
 .main-container #app .band-article figure img {
   width: 100%;
+}
+.main-container #app .band-article figure h3 {
+  font-family: "Roboto Mono";
 }
 .main-container .main-footer {
   display: flex;
@@ -136,7 +156,7 @@
   justify-content: center;
   align-items: center;
   background: #1c1c1c;
-  color: #fff;
+  color: #ffffff;
 }
 .main-container .main-footer figure figcaption header h2 {
   text-align: center;
