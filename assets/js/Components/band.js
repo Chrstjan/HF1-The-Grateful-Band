@@ -32,6 +32,51 @@ export const buildAboutBandView = () => {
   app.appendChild(bandContainer);
 };
 
+let bandMembersArray = 
+[
+    {
+        name: "Wendy Wei",
+        description: "Lead singer",
+        img: "assets/img/pexels-wendy-wei-1699161.jpg"
+    },
+    {
+        name: "Brett Sayles",
+        description: "Guitarist",
+        img: "assets/img/pexels-brett-sayles-1309240.jpg"
+    },
+    {
+        name: "Jc Siller",
+        description: "Drummer",
+        img: "assets/img/pexels-jc-siller-8634867.jpg"
+    },
+    {
+        name: "Oleg Magni",
+        description: "Bassist",
+        img: "assets/img/pexels-oleg-magni-1813124.jpg"
+    }
+];
+
+export const buildBandMembers = () => {
+    const bandArticle = document.createElement("article");
+    bandArticle.classList.add("band-article");
+
+    let bandMemberHeader = `<header><h2>The Members</h2></header>`;
+
+    bandArticle.innerHTML += bandMemberHeader;
+
+    bandMembersArray.map((member) => {
+        let bandMembers = `
+            <figure>
+                <img src="${member.img}"
+                <h4>${member.name}</h4>
+            </figure>`;
+
+            bandArticle.innerHTML += bandMembers;
+    })
+
+        app.appendChild(bandArticle);
+}
+
 const clearApp = () => {
   bandContainer.innerHTML = "";
 };

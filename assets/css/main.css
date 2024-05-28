@@ -1,14 +1,3 @@
-@-webkit-keyframes navbarSlidedown {
-  0% {
-    top: 9%;
-  }
-  50% {
-    top: 11%;
-  }
-  100% {
-    top: 10%;
-  }
-}
 @keyframes navbarSlidedown {
   0% {
     top: 9%;
@@ -54,8 +43,7 @@
 }
 .main-container .main-header .main-nav.show-nav {
   display: block;
-  -webkit-animation: navbarSlidedown 0.5s 1 forwards ease-in-out;
-          animation: navbarSlidedown 0.5s 1 forwards ease-in-out;
+  animation: navbarSlidedown 0.5s 1 forwards ease-in-out;
   position: absolute;
   top: 10%;
   left: 50%;
@@ -139,6 +127,9 @@
 .main-container #app .band-container .about-The-Grateful p {
   font-family: "Roboto Mono";
 }
+.main-container #app .band-article figure img {
+  width: 100%;
+}
 .main-container .main-footer {
   display: flex;
   flex-direction: column;
@@ -152,4 +143,4 @@
   font-family: "Rock Salt";
   font-weight: 400;
   font-size: x-large;
-}/*# sourceMappingURL=main.css.map */
+}
