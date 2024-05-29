@@ -2,18 +2,14 @@
   position: fixed;
   top: 50%;
   right: 1%;
-  //   top: 0;
-  //   right: 10%;
   background: #fff;
+  border: 2px solid #000;
   border-radius: 100%;
   z-index: 999;
+  animation: arrowSway 2s forwards infinite linear;
 
   .up-circle {
     display: block;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // transform: translate(-50%);
     padding: 0.1rem 1rem;
     text-align: center;
     z-index: 999;

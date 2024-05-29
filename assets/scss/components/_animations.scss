@@ -1,0 +1,74 @@
+@keyframes navbarSlidedown {
+  0% {
+    top: 9%;
+  }
+  50% {
+    top: 11%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+
+@keyframes logoRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes burgerTop {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(13px) rotate(45deg);
+  }
+}
+
+@keyframes burgerMiddle {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes burgerBottom {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-13px) rotate(-45deg);
+  }
+}
+
+@keyframes arrowSway {
+  0% {
+    top: 50%;
+  }
+  25% {
+    top: 47%;
+  }
+  50% {
+    top: 50%;
+  }
+  75% {
+    top: 53%;
+  }
+  100% {
+    top: 50%;
+  }
+}

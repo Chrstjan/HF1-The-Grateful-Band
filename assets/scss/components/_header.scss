@@ -1,60 +1,6 @@
 @use "../helpers/variables";
 @use "../helpers/mixins";
 
-@keyframes navbarSlidedown {
-  0% {
-    top: 9%;
-  }
-  50% {
-    top: 11%;
-  }
-  100% {
-    top: 10%;
-  }
-}
-
-@keyframes logoRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(60deg);
-  }
-  80% {
-    transform: rotate(-60deg);
-  }
-  100% {
-    transform: rotate(5deg);
-  }
-}
-
-@keyframes burgerTop {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(13px) rotate(45deg);
-  }
-}
-
-@keyframes burgerMiddle {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes burgerBottom {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-13px) rotate(-45deg);
-  }
-}
-
 .main-header {
   padding: 0rem 0.6rem;
   @include mixins.flexBox(row, space-between);
@@ -73,7 +19,6 @@
     .header-logo {
       width: 15vw;
       padding-bottom: 0.5rem;
-      animation: logoRotate 5s forwards infinite ease-in-out;
     }
   }
 
