@@ -8,17 +8,17 @@ export const shownav = () => {
     navigation.classList.toggle("show-nav");
 
     document.querySelectorAll(".bar").forEach((bar, index) => {
-      switch(true) {
-        case index === 0 :
+      switch (true) {
+        case index === 0:
           bar.classList.toggle("burger-top");
           break;
-        case index === 1 : 
+        case index === 1:
           bar.classList.toggle("burger-middle");
           break;
-        case index === 2 : 
+        case index === 2:
           bar.classList.toggle("burger-bottom");
           break;
-        default :
+        default:
           console.log("Index not found!");
           break;
       }
@@ -38,27 +38,5 @@ export const showNewsletter = () => {
     }
 
     newsletter();
-  })
-}
-
-export const scrollChecker = () => {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      // console.log("Stop criminal scum!");
-      const app = document.getElementById("app");
-
-      const upCircleContainer = document.createElement("div");
-      let upCircle = `
-        <span class="up-circle">
-          <a href="#home"></a>
-        </span>`;
-
-        upCircleContainer.innerHTML += upCircle;
-        app.appendChild(upCircleContainer);
-    }
-});
-}
-
-const clearApp = () => {
-  
-}
+  });
+};

@@ -317,6 +317,28 @@
   background: red;
 }
 
+.scroll-up-arrow {
+  position: fixed;
+  top: 50%;
+  right: 1%;
+  background: #fff;
+  border-radius: 100%;
+  z-index: 999;
+}
+.scroll-up-arrow .up-circle {
+  display: block;
+  padding: 0.1rem 1rem;
+  text-align: center;
+  z-index: 999;
+  text-align: center;
+}
+.scroll-up-arrow .up-circle a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 900;
+  color: #000;
+}
+
 .main-footer {
   display: flex;
   flex-direction: column;
