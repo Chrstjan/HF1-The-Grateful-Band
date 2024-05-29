@@ -295,6 +295,35 @@
   font-family: "Roboto Mono";
 }
 
+.concert-container {
+  color: #ffffff;
+  text-align: center;
+  background-image: url(../img/pexels-vishnu-r-nair-1105666.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.concert-container .sides-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+.concert-container .sides-container div ul {
+  padding: 0;
+  padding: 0rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+.concert-container .sides-container div ul li {
+  text-align: center;
+  list-style-type: none;
+  padding: 0rem 0.4rem;
+}
+
 .newsletter-container {
   position: fixed;
   top: 50%;

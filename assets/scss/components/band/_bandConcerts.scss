@@ -1,0 +1,31 @@
+@use "../../helpers/variables";
+@use "../../helpers/mixins";
+
+.concert-container {
+  color: variables.$white-text-color;
+  text-align: center;
+  background-image: url(../img/pexels-vishnu-r-nair-1105666.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .sides-container {
+    @include mixins.gridTemplate(2, 1fr, center, center);
+    gap: 0.6rem;
+
+    div {
+      ul {
+        padding: 0;
+        padding: 0rem 0.6rem;
+        @include mixins.flexBox(column, center);
+        gap: 0.7rem;
+
+        li {
+          text-align: center;
+          list-style-type: none;
+          //   border: 1px solid #000;
+          padding: 0rem 0.4rem;
+        }
+      }
+    }
+  }
+}
