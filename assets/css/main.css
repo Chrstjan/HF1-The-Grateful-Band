@@ -1,3 +1,14 @@
+@-webkit-keyframes navbarSlidedown {
+  0% {
+    top: 9%;
+  }
+  50% {
+    top: 11%;
+  }
+  100% {
+    top: 10%;
+  }
+}
 @keyframes navbarSlidedown {
   0% {
     top: 9%;
@@ -7,6 +18,20 @@
   }
   100% {
     top: 10%;
+  }
+}
+@-webkit-keyframes logoRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+  80% {
+    transform: rotate(-60deg);
+  }
+  100% {
+    transform: rotate(5deg);
   }
 }
 @keyframes logoRotate {
@@ -23,12 +48,28 @@
     transform: rotate(5deg);
   }
 }
+@-webkit-keyframes burgerTop {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(13px) rotate(45deg);
+  }
+}
 @keyframes burgerTop {
   0% {
     transform: translateY(0) rotate(0deg);
   }
   100% {
     transform: translateY(13px) rotate(45deg);
+  }
+}
+@-webkit-keyframes burgerMiddle {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes burgerMiddle {
@@ -39,6 +80,14 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes burgerBottom {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-13px) rotate(-45deg);
+  }
+}
 @keyframes burgerBottom {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -47,10 +96,7 @@
     transform: translateY(-13px) rotate(-45deg);
   }
 }
-.main-container {
-  background: #2c2c2c;
-}
-.main-container .main-header {
+.main-header {
   padding: 0rem 0.6rem;
   display: flex;
   flex-direction: row;
@@ -60,29 +106,31 @@
   color: #ffffff;
   background: #1c1c1c;
 }
-.main-container .main-header .header-container {
+.main-header .header-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
-.main-container .main-header .header-container h1 {
+.main-header .header-container h1 {
   font-family: "Rock Salt";
   font-weight: 400;
   font-size: x-large;
 }
-.main-container .main-header .header-container .header-logo {
+.main-header .header-container .header-logo {
   width: 15vw;
   padding-bottom: 0.5rem;
-  animation: logoRotate 5s forwards infinite ease-in-out;
+  -webkit-animation: logoRotate 5s forwards infinite ease-in-out;
+          animation: logoRotate 5s forwards infinite ease-in-out;
 }
-.main-container .main-header .main-nav {
+.main-header .main-nav {
   display: none;
 }
-.main-container .main-header .main-nav.show-nav {
+.main-header .main-nav.show-nav {
   display: block;
-  animation: navbarSlidedown 0.5s 1 forwards ease-in-out;
+  -webkit-animation: navbarSlidedown 0.5s 1 forwards ease-in-out;
+          animation: navbarSlidedown 0.5s 1 forwards ease-in-out;
   position: absolute;
   top: 10%;
   left: 50%;
@@ -91,7 +139,7 @@
   height: 30%;
   background: #1c1c1c;
 }
-.main-container .main-header .main-nav.show-nav ul {
+.main-header .main-nav.show-nav ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,17 +147,17 @@
   gap: 0.5rem;
   padding: 0;
 }
-.main-container .main-header .main-nav.show-nav ul li {
+.main-header .main-nav.show-nav ul li {
   list-style-type: none;
 }
-.main-container .main-header .main-nav.show-nav ul li a {
+.main-header .main-nav.show-nav ul li a {
   font-family: "Roboto Mono";
   font-weight: 800;
   font-size: 18px;
   text-decoration: none;
   color: #ffffff;
 }
-.main-container .main-header .main-nav.show-nav ul li button {
+.main-header .main-nav.show-nav ul li button {
   background: 0;
   border: 0;
   font-family: "Roboto Mono";
@@ -117,10 +165,10 @@
   font-size: 18px;
   color: #ffffff;
 }
-.main-container .main-header #hamburger {
+.main-header #hamburger {
   display: block;
 }
-.main-container .main-header #hamburger .bar {
+.main-header #hamburger .bar {
   display: block;
   margin: 5px 8px;
   width: 20px;
@@ -128,25 +176,24 @@
   background: #ffffff;
   border-radius: 6px;
 }
-.main-container .main-header #hamburger .bar.burger-top {
-  animation: burgerTop 0.5s 1 forwards ease-in-out;
+.main-header #hamburger .bar.burger-top {
+  -webkit-animation: burgerTop 0.5s 1 forwards ease-in-out;
+          animation: burgerTop 0.5s 1 forwards ease-in-out;
 }
-.main-container .main-header #hamburger .bar.burger-middle {
-  animation: burgerMiddle 0.5s 1 forwards ease-in-out;
+.main-header #hamburger .bar.burger-middle {
+  -webkit-animation: burgerMiddle 0.5s 1 forwards ease-in-out;
+          animation: burgerMiddle 0.5s 1 forwards ease-in-out;
 }
-.main-container .main-header #hamburger .bar.burger-bottom {
-  animation: burgerBottom 0.5s 1 forwards ease-in-out;
+.main-header #hamburger .bar.burger-bottom {
+  -webkit-animation: burgerBottom 0.5s 1 forwards ease-in-out;
+          animation: burgerBottom 0.5s 1 forwards ease-in-out;
 }
-.main-container #app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.main-container #app .landing-hero-figure img {
+
+.landing-hero-figure img {
   width: 80vw;
 }
-.main-container #app .bullets-container {
+
+.bullets-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -154,14 +201,15 @@
   gap: 0.6rem;
   padding-bottom: 0.6rem;
 }
-.main-container #app .bullets-container .figure-bullets {
+.bullets-container .figure-bullets {
   padding: 0.1rem 0.4rem;
   color: transparent;
   border-radius: 100%;
   border: 0;
   background: rgba(255, 255, 255, 0.6);
 }
-.main-container #app .band-container {
+
+.band-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,18 +221,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.main-container #app .band-container header h2 {
+.band-container header h2 {
   font-family: "Rock Salt";
   font-weight: 400;
   font-size: x-large;
 }
-.main-container #app .band-container .about-The-Grateful p:first-of-type {
+.band-container .about-The-Grateful p:first-of-type {
   margin-top: 0;
 }
-.main-container #app .band-container .about-The-Grateful p {
+.band-container .about-The-Grateful p {
   font-family: "Roboto Mono";
 }
-.main-container #app .band-article {
+
+.band-article {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-content: center;
@@ -192,27 +241,28 @@
   gap: 0.5rem;
   color: #ffffff;
 }
-.main-container #app .band-article header {
+.band-article header {
   padding-top: 0.8rem;
   text-align: center;
 }
-.main-container #app .band-article header h2 {
+.band-article header h2 {
   margin: 0;
   font-family: "Rock Salt";
 }
-.main-container #app .band-article figure img {
+.band-article figure img {
   width: 100%;
 }
-.main-container #app .band-article figure h3 {
+.band-article figure h3 {
   font-family: "Roboto Mono";
 }
-.main-container #app .newsletter-container {
+
+.newsletter-container {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.main-container #app .newsletter-container form fieldset {
+.newsletter-container form fieldset {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -230,7 +280,7 @@
   color: #ffffff;
   text-align: center;
 }
-.main-container #app .newsletter-container form fieldset button {
+.newsletter-container form fieldset button {
   position: absolute;
   right: 0;
   top: 0;
@@ -239,19 +289,19 @@
   color: #ffffff;
   font-size: 20px;
 }
-.main-container #app .newsletter-container form fieldset input {
+.newsletter-container form fieldset input {
   border-radius: 6px;
   border: 0;
   padding: 0.2rem 0.4rem;
 }
-.main-container #app .newsletter-container form fieldset .form-btn-container {
+.newsletter-container form fieldset .form-btn-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
 }
-.main-container #app .newsletter-container form fieldset .form-btn-container input {
+.newsletter-container form fieldset .form-btn-container input {
   border-radius: 6px;
   padding: 0.4rem 0.6rem;
   border: 0;
@@ -260,13 +310,14 @@
   font-weight: 600;
   font-size: medium;
 }
-.main-container #app .newsletter-container form fieldset .form-btn-container input:first-of-type {
+.newsletter-container form fieldset .form-btn-container input:first-of-type {
   background: green;
 }
-.main-container #app .newsletter-container form fieldset .form-btn-container input:last-of-type {
+.newsletter-container form fieldset .form-btn-container input:last-of-type {
   background: red;
 }
-.main-container .main-footer {
+
+.main-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -274,18 +325,28 @@
   background: #1c1c1c;
   color: #ffffff;
 }
-.main-container .main-footer figure figcaption header h2 {
+.main-footer figure figcaption header h2 {
   text-align: center;
   font-family: "Rock Salt";
   font-weight: 400;
   font-size: x-large;
 }
-.main-container .main-footer figure figcaption #so-me {
+.main-footer figure figcaption #so-me {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
 }
-.main-container .main-footer figure figcaption #so-me img {
+.main-footer figure figcaption #so-me img {
   width: 15vw;
 }
+
+.main-container {
+  background: #2c2c2c;
+}
+.main-container #app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=main.css.map */

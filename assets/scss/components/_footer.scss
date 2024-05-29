@@ -1,0 +1,27 @@
+@use "../helpers/variables";
+@use "../helpers/mixins";
+
+.main-footer {
+  @include mixins.flexBox(column, center);
+  background: variables.$header-background-color;
+  color: variables.$white-text-color;
+
+  figure {
+    figcaption {
+      header {
+        h2 {
+          text-align: center;
+          @include mixins.fontFamily("Rock Salt", 400, x-large);
+        }
+      }
+
+      #so-me {
+        @include mixins.gridTemplate(4, 1fr, center, center);
+
+        img {
+          width: 15vw;
+        }
+      }
+    }
+  }
+}

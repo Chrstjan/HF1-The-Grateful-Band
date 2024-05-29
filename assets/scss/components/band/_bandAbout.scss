@@ -1,0 +1,52 @@
+@use "../../helpers/variables";
+@use "../../helpers/mixins";
+
+.band-container {
+  @include mixins.flexBox(column, center);
+  display: flex;
+  color: variables.$white-text-color;
+  padding: 0rem 0.6rem;
+  background-image: url(../img/Video.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  header {
+    h2 {
+      @include mixins.fontFamily("Rock Salt", 400, x-large);
+    }
+  }
+
+  .about-The-Grateful {
+    p:first-of-type {
+      margin-top: 0;
+    }
+    p {
+      font-family: "Roboto Mono";
+    }
+  }
+}
+
+.band-article {
+  @include mixins.gridTemplate(1, 1fr, center, center);
+  gap: 0.5rem;
+  color: variables.$white-text-color;
+
+  header {
+    padding-top: 0.8rem;
+    text-align: center;
+
+    h2 {
+      margin: 0;
+      font-family: "Rock Salt";
+    }
+  }
+  figure {
+    img {
+      width: 100%;
+    }
+
+    h3 {
+      font-family: "Roboto Mono";
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@mixin flexBox($direction: row, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin gridTemplate($amount, $size: 1fr, $justify: center, $align: center) {
+  display: grid;
+  grid-template-columns: repeat($amount, $size);
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin fontFamily($fontname, $fontweight, $fontsize) {
+  font-family: $fontname;
+  font-weight: $fontweight;
+  font-size: $fontsize;
+}
