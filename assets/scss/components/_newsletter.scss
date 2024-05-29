@@ -37,6 +37,14 @@
         padding: 0.2rem 0.4rem;
       }
 
+      input.valid-input {
+        outline: 3px solid green;
+      }
+
+      input.invalid-input {
+        outline: 2px solid red;
+      }
+
       .form-btn-container {
         @include mixins.flexBox(row, center);
         gap: 0.6rem;

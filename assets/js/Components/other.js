@@ -1,4 +1,4 @@
-import { newsletter } from "../newsletter.js";
+import { newsletter } from "./newsletter form/newsletter.js";
 
 const hamburgerBtn = document.getElementById("hamburger");
 const navigation = document.querySelector(".main-nav");

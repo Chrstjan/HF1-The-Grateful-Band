@@ -333,6 +333,12 @@
   border: 0;
   padding: 0.2rem 0.4rem;
 }
+.newsletter-container form fieldset input.valid-input {
+  outline: 3px solid green;
+}
+.newsletter-container form fieldset input.invalid-input {
+  outline: 2px solid red;
+}
 .newsletter-container form fieldset .form-btn-container {
   display: flex;
   flex-direction: row;
