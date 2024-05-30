@@ -29,8 +29,7 @@
 }
 .main-header .main-nav.show-nav {
   display: block;
-  -webkit-animation: navbarSlidedown 0.5s 1 forwards ease-in-out;
-          animation: navbarSlidedown 0.5s 1 forwards ease-in-out;
+  animation: navbarSlidedown 0.5s 1 forwards ease-in-out;
   position: absolute;
   top: 10%;
   left: 50%;
@@ -77,28 +76,13 @@
   border-radius: 6px;
 }
 .main-header #hamburger .bar.burger-top {
-  -webkit-animation: burgerTop 0.5s 1 forwards ease-in-out;
-          animation: burgerTop 0.5s 1 forwards ease-in-out;
+  animation: burgerTop 0.5s 1 forwards ease-in-out;
 }
 .main-header #hamburger .bar.burger-middle {
-  -webkit-animation: burgerMiddle 0.5s 1 forwards ease-in-out;
-          animation: burgerMiddle 0.5s 1 forwards ease-in-out;
+  animation: burgerMiddle 0.5s 1 forwards ease-in-out;
 }
 .main-header #hamburger .bar.burger-bottom {
-  -webkit-animation: burgerBottom 0.5s 1 forwards ease-in-out;
-          animation: burgerBottom 0.5s 1 forwards ease-in-out;
-}
-
-@-webkit-keyframes navbarSlidedown {
-  0% {
-    top: 9%;
-  }
-  50% {
-    top: 11%;
-  }
-  100% {
-    top: 10%;
-  }
+  animation: burgerBottom 0.5s 1 forwards ease-in-out;
 }
 
 @keyframes navbarSlidedown {
@@ -110,23 +94,6 @@
   }
   100% {
     top: 10%;
-  }
-}
-@-webkit-keyframes logoRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(40deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-40deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 @keyframes logoRotate {
@@ -146,28 +113,12 @@
     transform: rotate(0deg);
   }
 }
-@-webkit-keyframes burgerTop {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(13px) rotate(45deg);
-  }
-}
 @keyframes burgerTop {
   0% {
     transform: translateY(0) rotate(0deg);
   }
   100% {
     transform: translateY(13px) rotate(45deg);
-  }
-}
-@-webkit-keyframes burgerMiddle {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes burgerMiddle {
@@ -178,37 +129,12 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes burgerBottom {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-13px) rotate(-45deg);
-  }
-}
 @keyframes burgerBottom {
   0% {
     transform: translateY(0) rotate(0deg);
   }
   100% {
     transform: translateY(-13px) rotate(-45deg);
-  }
-}
-@-webkit-keyframes arrowSway {
-  0% {
-    top: 50%;
-  }
-  25% {
-    top: 47%;
-  }
-  50% {
-    top: 50%;
-  }
-  75% {
-    top: 53%;
-  }
-  100% {
-    top: 50%;
   }
 }
 @keyframes arrowSway {
@@ -296,9 +222,14 @@
 }
 
 .concert-container {
+  width: 100%;
+  height: 100vh;
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: hidden;
   color: #ffffff;
   text-align: center;
-  background-image: url(../img/pexels-vishnu-r-nair-1105666.jpg);
+  background: url("../img/pexels-vishnu-r-nair-1105666.jpg") no-repeat center center fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -399,8 +330,7 @@
   border: 2px solid #000;
   border-radius: 100%;
   z-index: 999;
-  -webkit-animation: arrowSway 2s forwards infinite linear;
-          animation: arrowSway 2s forwards infinite linear;
+  animation: arrowSway 2s forwards infinite linear;
 }
 .scroll-up-arrow .up-circle {
   display: block;
@@ -431,8 +361,7 @@
   align-items: center;
 }
 .main-footer figure .band-logo {
-  -webkit-animation: logoRotate 4s forwards infinite linear;
-          animation: logoRotate 4s forwards infinite linear;
+  animation: logoRotate 4s forwards infinite linear;
   width: 80%;
 }
 .main-footer figure figcaption header h2 {
@@ -448,6 +377,7 @@
   align-items: center;
 }
 .main-footer figure figcaption #so-me img {
+  filter: saturate(1);
   width: 15vw;
 }
 
@@ -459,4 +389,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}/*# sourceMappingURL=main.css.map */
+}

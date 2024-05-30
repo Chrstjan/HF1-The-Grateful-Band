@@ -17,3 +17,7 @@
   font-weight: $fontweight;
   font-size: $fontsize;
 }
+
+@mixin parallax-background($file) {
+  background: url($file) no-repeat center center fixed;
+}

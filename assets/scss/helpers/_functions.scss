@@ -1,0 +1,6 @@
+@use "../helpers/variables" as *;
+
+@function invertColor($color) {
+    $invertedColor: invert($color);
+    @return $invertedColor;
+}

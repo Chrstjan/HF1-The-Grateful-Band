@@ -2,9 +2,14 @@
 @use "../../helpers/mixins";
 
 .concert-container {
+  width: 100%;
+  height: 100vh;
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: hidden;
   color: variables.$white-text-color;
   text-align: center;
-  background-image: url(../img/pexels-vishnu-r-nair-1105666.jpg);
+  @include mixins.parallax-background("../img/pexels-vishnu-r-nair-1105666.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 

@@ -1,5 +1,6 @@
 @use "../helpers/variables";
 @use "../helpers/mixins";
+@use "../helpers/functions" as *;
 
 .main-footer {
   @include mixins.flexBox(column, center);
@@ -24,6 +25,7 @@
         @include mixins.gridTemplate(4, 1fr, center, center);
 
         img {
+          filter:saturate(1);
           width: 15vw;
         }
       }
