@@ -21,6 +21,29 @@
       color: variables.$white-text-color;
       text-align: center;
 
+      @media (min-width: 1300px) {
+        width: 20vw;
+        height: 15vw;
+
+        span {
+          input {
+            padding: 0.3rem 0.7rem;
+          }
+        }
+
+        button {
+          &:hover {
+            cursor: pointer;
+            scale: 1.1;
+          }
+        }
+      }
+
+      span {
+        @include mixins.flexBox(column, center);
+        gap: 0.5rem;
+      }
+
       button {
         position: absolute;
         right: 0;
@@ -42,7 +65,7 @@
       }
 
       input.invalid-input {
-        outline: 2px solid red;
+        outline: 3px solid red;
       }
 
       .form-btn-container {

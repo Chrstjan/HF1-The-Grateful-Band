@@ -409,6 +409,26 @@
   color: #ffffff;
   text-align: center;
 }
+@media (min-width: 1300px) {
+  .newsletter-container form fieldset {
+    width: 20vw;
+    height: 15vw;
+  }
+  .newsletter-container form fieldset span input {
+    padding: 0.3rem 0.7rem;
+  }
+  .newsletter-container form fieldset button:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+}
+.newsletter-container form fieldset span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
 .newsletter-container form fieldset button {
   position: absolute;
   right: 0;
@@ -427,7 +447,7 @@
   outline: 3px solid green;
 }
 .newsletter-container form fieldset input.invalid-input {
-  outline: 2px solid red;
+  outline: 3px solid red;
 }
 .newsletter-container form fieldset .form-btn-container {
   display: flex;
@@ -514,10 +534,17 @@
 .main-footer figure figcaption #so-me img {
   filter: saturate(1);
   width: 15vw;
+  filter: invert(20%);
 }
 @media (min-width: 1300px) {
   .main-footer figure figcaption #so-me img {
-    width: 5vw;
+    width: 3vw;
+  }
+  .main-footer figure figcaption #so-me img:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background: #ffffff;
+    border-radius: 9px;
   }
 }
 

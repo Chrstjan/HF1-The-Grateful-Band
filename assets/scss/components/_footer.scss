@@ -31,9 +31,17 @@
         img {
           filter:saturate(1);
           width: 15vw;
+          filter: invert(20%);
 
           @media (min-width: 1300px) {
-            width: 5vw;
+            width: 3vw;
+
+            &:hover {
+              cursor: pointer;
+              scale: 1.1;
+              background: variables.$white-text-color;
+              border-radius: 9px;
+            }
           }
         }
       }
