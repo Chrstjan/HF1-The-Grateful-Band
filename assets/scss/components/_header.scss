@@ -8,22 +8,81 @@
   color: variables.$white-text-color;
   background: variables.$header-background-color;
 
-  .header-container {
-    @include mixins.flexBox(row, center);
-    gap: 0.5rem;
+  @media (min-width: 1300px) {
+    @include mixins.flexBox(row, space-evenly);
 
     h1 {
       @include mixins.fontFamily("Rock Salt", 400, x-large);
     }
 
     .header-logo {
+      width: 5vw !important;
+    }
+  }
+
+  .header-container {
+    @include mixins.flexBox(row, center);
+    gap: 0.5rem;
+
+    h1 {
+      @include mixins.fontFamily("Rock Salt", 400, x-large);
+
+      &:hover {
+        scale: 1.1;
+        cursor: pointer;
+      }
+    }
+
+    .header-logo {
       width: 15vw;
       padding-bottom: 0.5rem;
+
+      &:hover {
+        scale: 1.01;
+        animation: logoRotate 4s forwards infinite linear;
+      }
     }
   }
 
   .main-nav {
     display: none;
+
+    @media (min-width: 1300px) {
+      display: block;
+
+      ul {
+        @include mixins.flexBox(row, center);
+        gap: 1.4rem;
+
+        li {
+          list-style-type: none;
+          &:hover {
+            scale: 1.1;
+            cursor: pointer;
+            text-decoration: underline;
+          }
+  
+          a {
+            @include mixins.fontFamily("Roboto Mono", 800, 19px);
+            text-decoration: none;
+            color: variables.$white-text-color;
+          }
+  
+          button {
+            background: 0;
+            border: 0;
+            @include mixins.fontFamily("Roboto Mono", 800, 20px);
+            color: variables.$white-text-color;
+
+            &:hover {
+              scale: 1.1;
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
   }
 
   .main-nav.show-nav {
@@ -64,6 +123,10 @@
   #hamburger {
     display: block;
 
+    @media (min-width: 1300px) {
+      display: none;
+    }
+
     .bar {
       display: block;
       margin: 5px 8px;
@@ -83,4 +146,5 @@
       animation: burgerBottom 0.5s 1 forwards ease-in-out;
     }
   }
+ 
 }

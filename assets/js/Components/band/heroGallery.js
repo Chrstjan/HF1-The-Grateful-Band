@@ -48,6 +48,21 @@ export const buildHero = () => {
       gallerImage.src = bulletNumber;
     });
   });
+
+  const gallerySlider = () => {
+    let currentIndex = 0;
+    const galleryImage = document.querySelector(".hero-image");
+
+    const updateIndex = () => {
+      currentIndex = (currentIndex + 1) % galleryArray.length;
+      galleryImage.src = galleryArray[currentIndex];
+    };
+
+    setInterval(updateIndex, 4000);
+  };
+
+  gallerySlider();
+
 };
 
 const clearApp = () => {

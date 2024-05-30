@@ -8,6 +8,22 @@
   color: #ffffff;
   background: #1c1c1c;
 }
+@media (min-width: 1300px) {
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .main-header h1 {
+    font-family: "Rock Salt";
+    font-weight: 400;
+    font-size: x-large;
+  }
+  .main-header .header-logo {
+    width: 5vw !important;
+  }
+}
 .main-header .header-container {
   display: flex;
   flex-direction: row;
@@ -20,12 +36,60 @@
   font-weight: 400;
   font-size: x-large;
 }
+.main-header .header-container h1:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
 .main-header .header-container .header-logo {
   width: 15vw;
   padding-bottom: 0.5rem;
 }
+.main-header .header-container .header-logo:hover {
+  scale: 1.01;
+  animation: logoRotate 4s forwards infinite linear;
+}
 .main-header .main-nav {
   display: none;
+}
+@media (min-width: 1300px) {
+  .main-header .main-nav {
+    display: block;
+  }
+  .main-header .main-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+  }
+  .main-header .main-nav ul li {
+    list-style-type: none;
+  }
+  .main-header .main-nav ul li:hover {
+    scale: 1.1;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .main-header .main-nav ul li a {
+    font-family: "Roboto Mono";
+    font-weight: 800;
+    font-size: 19px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .main-header .main-nav ul li button {
+    background: 0;
+    border: 0;
+    font-family: "Roboto Mono";
+    font-weight: 800;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .main-header .main-nav ul li button:hover {
+    scale: 1.1;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 .main-header .main-nav.show-nav {
   display: block;
@@ -66,6 +130,11 @@
 }
 .main-header #hamburger {
   display: block;
+}
+@media (min-width: 1300px) {
+  .main-header #hamburger {
+    display: none;
+  }
 }
 .main-header #hamburger .bar {
   display: block;
@@ -157,6 +226,11 @@
 .landing-hero-figure img {
   width: 80vw;
 }
+@media (min-width: 1300px) {
+  .landing-hero-figure img {
+    width: 60vw;
+  }
+}
 
 .bullets-container {
   display: flex;
@@ -166,6 +240,15 @@
   gap: 0.6rem;
   padding-bottom: 0.6rem;
 }
+@media (min-width: 1300px) {
+  .bullets-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-items: start;
+  }
+}
 .bullets-container .figure-bullets {
   padding: 0.1rem 0.4rem;
   color: transparent;
@@ -173,7 +256,21 @@
   border: 0;
   background: rgba(255, 255, 255, 0.6);
 }
+@media (min-width: 1300px) {
+  .bullets-container .figure-bullets:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+}
 
+@media (min-width: 1300px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+}
 .band-container {
   display: flex;
   flex-direction: column;
@@ -185,6 +282,25 @@
   background-image: url(../img/Video.gif);
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (min-width: 1300px) {
+  .band-container {
+    width: 94.9%;
+    height: 60vh;
+  }
+  .band-container h2 {
+    font-size: 2.5vw !important;
+  }
+  .band-container .about-The-Grateful {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .band-container .about-The-Grateful p {
+    font-size: 18px;
+  }
 }
 .band-container header h2 {
   font-family: "Rock Salt";
@@ -206,6 +322,20 @@
   gap: 0.5rem;
   color: #ffffff;
 }
+@media (min-width: 1300px) {
+  .band-article span {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  .band-article figure img {
+    height: 100%;
+  }
+  .band-article figure img:hover {
+    scale: 1.01;
+  }
+}
 .band-article header {
   padding-top: 0.8rem;
   text-align: center;
@@ -217,7 +347,7 @@
 .band-article figure img {
   width: 100%;
 }
-.band-article figure h3 {
+.band-article figure h2 {
   font-family: "Roboto Mono";
 }
 
@@ -364,6 +494,11 @@
   animation: logoRotate 4s forwards infinite linear;
   width: 80%;
 }
+@media (min-width: 1300px) {
+  .main-footer figure .band-logo {
+    width: 20%;
+  }
+}
 .main-footer figure figcaption header h2 {
   text-align: center;
   font-family: "Rock Salt";
@@ -379,6 +514,11 @@
 .main-footer figure figcaption #so-me img {
   filter: saturate(1);
   width: 15vw;
+}
+@media (min-width: 1300px) {
+  .main-footer figure figcaption #so-me img {
+    width: 5vw;
+  }
 }
 
 .main-container {

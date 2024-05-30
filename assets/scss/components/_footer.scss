@@ -12,6 +12,10 @@
     .band-logo {
       animation: logoRotate 4s forwards infinite linear;
       width: 80%;
+
+      @media (min-width: 1300px) {
+        width: 20%;
+      }
     }
     figcaption {
       header {
@@ -27,6 +31,10 @@
         img {
           filter:saturate(1);
           width: 15vw;
+
+          @media (min-width: 1300px) {
+            width: 5vw;
+          }
         }
       }
     }

@@ -3,6 +3,10 @@
 .landing-hero-figure {
   img {
     width: 80vw;
+
+    @media (min-width: 1300px) {
+      width: 60vw;
+    }
   }
 }
 
@@ -11,11 +15,29 @@
   gap: 0.6rem;
   padding-bottom: 0.6rem;
 
+  @media (min-width: 1300px) {
+    @include mixins.flexBox(column, flex-start);
+    align-items: start;
+  }
+
   .figure-bullets {
     padding: 0.1rem 0.4rem;
     color: transparent;
     border-radius: 100%;
     border: 0;
     background: #ffffff99;
+
+    @media (min-width: 1300px) {
+      &:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .hero-container {
+    @include mixins.gridTemplate(2, 1fr, center, center);
   }
 }

@@ -16,7 +16,7 @@ export const buildAboutBandView = () => {
                 Comprised of four talented musicians,
             </p>
             <p>
-                The Restful blends catchy melodies, 
+                The Grateful blends catchy melodies, 
                 powerful lyrics, and electrifying performances to create a
                 sound that's both refreshing and unforgettable.
             </p>
@@ -72,11 +72,13 @@ export const buildBandMembers = () => {
 
   bandArticle.innerHTML += bandMemberHeader;
 
+  let membersContainer = document.createElement("span");
+
   bandMembersArray.map((member) => {
     let bandMembers = `
             <figure>
                 <img src="${member.img}"
-                <h3>${member.name}</h3>
+                <h2>${member.name}</h2>
                 <figcaption>
                     <header>
                         <h4>${member.role}</h4>
@@ -84,8 +86,8 @@ export const buildBandMembers = () => {
                     <p>${member.description}</p>
                 </figcaption>
             </figure>`;
-
-    bandArticle.innerHTML += bandMembers;
+    membersContainer.innerHTML += bandMembers;
+    bandArticle.appendChild(membersContainer);
   });
 
   app.appendChild(bandArticle);
