@@ -1,8 +1,10 @@
+import { selectGalleryImage, gallerySlider } from "./gallerySlider.js";
+
 const app = document.getElementById("app");
 const heroContainer = document.createElement("div");
 heroContainer.classList.add("hero-container");
 
-const galleryArray = [
+ const galleryArray = [
   "./assets/img/pexels-brett-sayles-1309240.jpg",
   "./assets/img/pexels-jc-siller-8634867.jpg",
   "./assets/img/pexels-josh-sorenson-995301.jpg",
@@ -36,33 +38,8 @@ export const buildHero = () => {
     app.appendChild(heroContainer);
   });
 
-  const heroBullets = document.querySelectorAll(".figure-bullets");
-  heroBullets.forEach((bullet) => {
-    bullet.addEventListener("click", () => {
-      const gallerImage = document.querySelector(".hero-image");
-      console.log(gallerImage);
-
-      const bulletNumber = bullet.getAttribute("bullet-index");
-      console.log(bulletNumber);
-
-      gallerImage.src = bulletNumber;
-    });
-  });
-
-  const gallerySlider = () => {
-    let currentIndex = 0;
-    const galleryImage = document.querySelector(".hero-image");
-
-    const updateIndex = () => {
-      currentIndex = (currentIndex + 1) % galleryArray.length;
-      galleryImage.src = galleryArray[currentIndex];
-    };
-
-    setInterval(updateIndex, 4000);
-  };
-
-  gallerySlider();
-
+  selectGalleryImage();
+  gallerySlider(galleryArray);
 };
 
 const clearApp = () => {

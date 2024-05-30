@@ -3,7 +3,7 @@ import {
   buildBandMembers,
 } from "../Components/band/band.js";
 import { buildConcertView } from "./band/concert.js";
-import { buildHero } from "./band/heroGallery.js";
+import { buildHero } from "./gallery/heroGallery.js";
 import { showNewsletter, shownav } from "./other.js";
 import { scrollChecker } from "./upArrow.js";
 
