@@ -1,6 +1,7 @@
 const app = document.getElementById("app");
 const albumsContainer = document.createElement("article");
 albumsContainer.classList.add("albums-container");
+albumsContainer.id = "albums";
 
 const albumBtn = document.getElementById("albums");
 
@@ -40,21 +41,24 @@ const albums = [
 export const buildAlbums = () => {
     clearApp();
 
+    let albumArticleHeader = `<header class="album-header"><h2>Albums</h2></header>`;
+
+    albumsContainer.innerHTML += albumArticleHeader;
+
     albums.map((album) => {
         let albums = `
         <span>
          <header>
-            <h2>${album.album_name}</h2>
+            <h3>${album.album_name}</h3>
          </header>
          <div class="album-content">
             <p>Release date: ${album.release_date}</p>
             <p>Tracks: ${album.key_tracks}</p>
          </div>
         </span>`;
-
+         
          albumsContainer.innerHTML += albums;
     })
-
     app.appendChild(albumsContainer);
 }
 
