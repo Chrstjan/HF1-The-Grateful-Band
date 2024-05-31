@@ -10,7 +10,6 @@ heroContainer.classList.add("hero-container");
   "./assets/img/pexels-josh-sorenson-995301.jpg",
   "./assets/img/pexels-oleg-magni-1813124.jpg",
   "./assets/img/pexels-vishnu-r-nair-1105666.jpg",
-  "./assets/img/pexels-wendy-wei-1699161.jpg",
 ];
 
 export const buildHero = () => {

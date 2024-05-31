@@ -1,0 +1,22 @@
+@use "../../helpers/variables";
+@use "../../helpers/mixins";
+
+.albums-container {
+    @include mixins.flexBox(column, center);
+    gap: 0.7rem;
+    text-align: center;
+    color: variables.$white-text-color;
+
+    border: 2px solid #000;
+    border-radius: 7px;
+    margin: 0.5rem 0.7rem;
+
+    .album-content {
+        @include mixins.flexBox(column, center);
+        background: #1c1c1c;
+        text-align: center;
+        border: 2px solid #000;
+        border-radius: 6px;
+        margin: 0rem 0.5rem 0.5rem 0.5rem;
+    }
+}

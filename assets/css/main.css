@@ -385,6 +385,30 @@
   padding: 0rem 0.4rem;
 }
 
+.albums-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid #000;
+  border-radius: 7px;
+  margin: 0.5rem 0.7rem;
+}
+.albums-container .album-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1c1c1c;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 6px;
+  margin: 0rem 0.5rem 0.5rem 0.5rem;
+}
+
 .newsletter-container {
   position: fixed;
   top: 50%;

@@ -2,6 +2,7 @@ import {
   buildAboutBandView,
   buildBandMembers,
 } from "../Components/band/band.js";
+import { buildAlbums } from "./band/albums.js";
 import { buildConcertView } from "./band/concert.js";
 import { buildHero } from "./gallery/heroGallery.js";
 import { showNewsletter, shownav } from "./other/other.js";
@@ -15,6 +16,7 @@ export const initPage = () => {
   shownav();
   buildAboutBandView();
   buildBandMembers();
+  buildAlbums();
   buildConcertView();
   showNewsletter();
   scrollChecker();
